@@ -25,7 +25,7 @@ function Get-HardcodedStringArrayFromMultilineString {
                 $resultsb.Append(",") | out-null
             }         
         }
-        $result = $resultsb.ToString().Substring(0,$resultsb.ToString().Length -1) + ")"
+        $result = $resultsb.ToString().Substring(0,$resultsb.ToString().LastIndexOf(",")) + ")"
         
         $result
     }
